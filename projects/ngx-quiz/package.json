@@ -1,0 +1,36 @@
+{
+  "name": "ngx-quiz",
+  "version": "1.0.0-beta",
+  "description": "A quiz component for Angular projects",
+  "keywords": [
+    "angular",
+    "angular2",
+    "ng2-quiz",
+    "ngx-quiz",
+    "ng-quiz",
+    "ng2",
+    "angular-quiz",
+    "quiz",
+    "quizz",
+    "test",
+    "exam",
+    "answers",
+    "question"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^14.1.0",
+    "@angular/core": "^14.1.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "author": {
+    "name": "Carlos Díaz-Alejo Gómez",
+    "email": "carlos.diaz.alejo@gmail.com",
+    "url": "www.linkedin.com/in/carlosdiazalejogomez"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}

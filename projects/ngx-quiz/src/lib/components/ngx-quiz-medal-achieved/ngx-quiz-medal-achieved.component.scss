@@ -1,0 +1,26 @@
+@import '../../../theme/variables';
+@import '../../../theme/buttons';
+
+.image {
+  width: rem-calc(320);
+}
+
+.medal-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: auto;
+  width: rem-calc(320);
+  height: rem-calc(320);
+
+  app-svg-hexagon {
+    position: absolute;
+  }
+
+  app-svg-medal {
+    position: absolute;
+    height: rem-calc(240);
+    width: rem-calc(240);
+  }
+}

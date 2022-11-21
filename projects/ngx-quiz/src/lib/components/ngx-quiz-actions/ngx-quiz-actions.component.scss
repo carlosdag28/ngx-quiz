@@ -1,0 +1,17 @@
+@import '../../../theme/variables';
+@import '../../../theme/breakpoints';
+
+* {
+  box-sizing: border-box;
+}
+
+.quiz__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem-calc(16);
+  margin-bottom: rem-calc(16);
+
+  & > * {
+    flex-grow: 1;
+  }
+}

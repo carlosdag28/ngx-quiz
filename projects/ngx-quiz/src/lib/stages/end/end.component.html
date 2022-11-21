@@ -1,0 +1,32 @@
+<div class="end-screen">
+  <div class="end-screen__inner-container">
+    <h1 class="end-screen__title">{{ quiz.endScreen?.title || 'Congrats!' }}</h1>
+    <h2 class="end-screen__subtitle">{{ quiz.endScreen?.description || 'You just completed' }}</h2>
+
+    <div class="result-container">
+      <div class="result-container__medal-container">
+        <ngx-quiz-medal-achieved [displayImage]="quiz.endScreen?.displayImage"></ngx-quiz-medal-achieved>
+      </div>
+
+      <div class="result-container__score-container">
+        <ngx-quiz-score-card
+          [score]="score"
+          [name]="quiz.name"
+          [level]="quiz.level"
+          [duration]="quiz.duration"
+          [totalStars]="totalStars"
+          [achievedStars]="achievedStars"
+        ></ngx-quiz-score-card>
+
+        <ng-container *ngIf="quiz.repeatAllowed">
+          <div class="result-container__button-container">
+            <ngx-quiz-action-button
+              [displayText]="quiz.endScreen?.buttonText || 'Restart'"
+              (ev_click)="restartQuiz()"
+            ></ngx-quiz-action-button>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

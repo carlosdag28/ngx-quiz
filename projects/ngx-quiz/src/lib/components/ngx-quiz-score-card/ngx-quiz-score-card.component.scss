@@ -1,0 +1,55 @@
+@import '../../../theme/variables';
+@import '../../../theme/buttons';
+@import '../../../theme/unit';
+
+.score-card {
+  display: flex;
+  padding: rem-calc(24);
+  border-radius: rem-calc(16);
+  background-color: $score-card-bg;
+
+  .points {
+    padding: rem-calc(16) rem-calc(24);
+    border-radius: rem-calc(16);
+    color: $score-number;
+    background-color: $score-number-bg;
+
+    &__number {
+      font-size: rem-calc(36);
+    }
+
+    &__text {
+      font-size: rem-calc(14);
+    }
+  }
+
+  .info {
+    width: 100%;
+    padding-left: rem-calc(16);
+    text-align: left;
+
+    &__title {
+      font-size: rem-calc(20);
+      color: $score-title;
+    }
+
+    &__stars {
+      display: flex;
+      margin: rem-calc(8 0);
+
+      app-svg-star {
+        width: rem-calc(24);
+        height: rem-calc(24);
+
+        &:not(:last-child) {
+          margin-right: rem-calc(8);
+        }
+      }
+    }
+
+    &__level {
+      font-size: rem-calc(14);
+      color: $score-level;
+    }
+  }
+}

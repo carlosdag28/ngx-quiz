@@ -1,0 +1,47 @@
+@import '../../../../theme/variables';
+@import '../../../../theme/breakpoints';
+
+:host {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  position: absolute;
+  width: 100%;
+  transition: all 0.1s;
+
+  .first-gradient {
+    stop:first-child {
+      stop-color: $crown-inner-left;
+    }
+
+    stop:nth-child(2) {
+      stop-color: $crown-inner-right;
+    }
+  }
+
+  .second-gradient {
+    stop:first-child {
+      stop-color: $crown-silhouette-top;
+    }
+
+    stop:nth-child(2) {
+      stop-color: $crown-silhouette-bottom;
+    }
+  }
+
+  .third-gradient {
+    stop:first-child {
+      stop-color: $crown-base-top;
+    }
+
+    stop:nth-child(2) {
+      stop-color: $crown-base-bottom;
+    }
+  }
+}

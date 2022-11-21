@@ -1,0 +1,15 @@
+<div class="quiz__header">
+  <ng-container *ngIf="displayImage">
+    <div class="header__container header__container--image">
+      <div class="image">
+        <img [src]="displayImage" alt="quiz-image" />
+      </div>
+    </div>
+  </ng-container>
+  <div class="header__container header__container--info">
+    <div class="question">{{ title }}</div>
+    <ng-container *ngIf="description">
+      <div class="description">{{ description }}</div>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="start-screen">
+  <div class="start-screen__inner-container">
+    <ng-container *ngIf="quiz.startScreen.title">
+      <div class="start-screen__title">{{ quiz.startScreen.title }}</div>
+    </ng-container>
+
+    <ng-container *ngIf="quiz.startScreen.description">
+      <div class="start-screen__subtitle">{{ quiz.startScreen.description }}</div>
+    </ng-container>
+
+    <div class="start-screen__card">
+      <ng-container *ngIf="quiz.name">
+        <div class="title">{{ quiz.name }}</div>
+      </ng-container>
+
+      <ng-container *ngIf="quiz.startScreen.displayImage">
+        <img class="image" [src]="quiz.startScreen.displayImage" alt="start" />
+      </ng-container>
+
+      <div class="button-container">
+        <ngx-quiz-action-button [displayText]="quiz.startScreen.buttonText" (ev_click)="startQuiz()"></ngx-quiz-action-button>
+      </div>
+    </div>
+
+    <div class="start-screen__quiz-info">{{ quiz.level }} · {{ quiz.duration | time }}</div>
+  </div>
+</div>

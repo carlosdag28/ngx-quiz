@@ -1,0 +1,46 @@
+@import '../../../theme/variables';
+@import '../../../theme/breakpoints';
+
+.quiz__header {
+  display: grid;
+  gap: rem-calc(16);
+  margin-bottom: rem-calc(32);
+
+  grid-template-areas:
+    'image'
+    'info';
+
+  .header__container {
+    &--image {
+      grid-area: image;
+    }
+
+    &--info {
+      grid-area: info;
+    }
+  }
+
+  .image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: rem-calc(16);
+
+    img {
+      width: 100%;
+      max-width: rem-calc(400);
+      border-radius: rem-calc(16);
+      //border-image: linear-gradient(135deg, #F7B760 0%, #D1EFEB 50%, #049687 100%) 25% round;
+    }
+  }
+
+  .question {
+    font-weight: 600;
+    font-size: rem-calc(24);
+    margin-bottom: rem-calc(8);
+    color: $question-title;
+  }
+
+  .description {
+    font-size: rem-calc(16);
+  }
+}

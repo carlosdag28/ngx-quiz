@@ -1,0 +1,38 @@
+@import 'variables';
+@import 'unit';
+
+.button {
+  padding: rem-calc(16 32);
+  border-style: none;
+  border-radius: rem-calc(4);
+  font-size: rem-calc(16);
+  cursor: pointer;
+  user-select: none;
+  width: 100%;
+
+  &--primary {
+    font-size: rem-calc(20);
+    font-weight: 500;
+    color: $btn-primary-text-color;
+    background: linear-gradient(90deg, $btn-primary-left-default 0%, $btn-primary-right-default 100%);
+    border-radius: rem-calc(16);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    -webkit-tap-highlight-color: transparent;
+
+    &:hover {
+      background: linear-gradient(90deg, $btn-primary-left-hover 0%, $btn-primary-right-hover 100%);
+    }
+
+    &:not([disabled]):active {
+      background: -webkit-linear-gradient($btn-primary-left-active, $btn-primary-right-active);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &:disabled {
+      background: $btn-primary-disabled-bg;
+      box-shadow: none;
+      cursor: default;
+    }
+  }
+}

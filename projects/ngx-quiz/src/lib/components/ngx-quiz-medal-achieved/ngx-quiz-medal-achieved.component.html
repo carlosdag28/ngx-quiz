@@ -1,0 +1,10 @@
+<ng-container *ngIf="displayImage; else noImage">
+  <img class="image" [src]="displayImage" alt="" />
+</ng-container>
+
+<ng-template #noImage>
+  <div class="medal-image">
+    <app-svg-hexagon></app-svg-hexagon>
+    <app-svg-medal></app-svg-medal>
+  </div>
+</ng-template>

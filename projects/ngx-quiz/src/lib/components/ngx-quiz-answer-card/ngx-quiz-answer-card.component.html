@@ -1,0 +1,22 @@
+<div class="answer" [class.answer--selected]="selected" (click)="cardClick()">
+  <ng-container *ngIf="displayImage">
+    <div class="answer__image">
+      <img [src]="displayImage" alt="answer-image" />
+    </div>
+  </ng-container>
+
+  <div>{{ displayText }}</div>
+  <div class="answer-circle">
+    <ng-container *ngIf="selected">
+      <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M0.75 4.49992L3.58 7.32992L9.25 1.66992"
+          stroke="white"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </ng-container>
+  </div>
+</div>

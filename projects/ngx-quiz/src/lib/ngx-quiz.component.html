@@ -1,0 +1,22 @@
+<div class="quiz">
+  <ng-container *ngIf="quizStatus$ | async as quizStatus">
+
+    <ng-container *ngIf="quizStatus === started && quiz.startScreen">
+      <ngx-quiz-start [quiz]="quiz" (ev_start)="startQuiz()"></ngx-quiz-start>
+    </ng-container>
+
+    <ng-container *ngIf="quizStatus === ongoing">
+      <ngx-quiz-on-going
+        [quiz]="quiz"
+        [index]="index$ | async"
+        (ev_answerClicked)="answerClicked($event)"
+        (ev_prevQuestion)="previousQuestion()"
+        (ev_nextQuestion)="nextQuestion()"
+      ></ngx-quiz-on-going>
+    </ng-container>
+
+    <ng-container *ngIf="quizStatus === finished">
+      <ngx-quiz-end [quiz]="quiz" (ev_restart)="restartQuiz()" (ev_emitReport)="finishQuiz($event)"></ngx-quiz-end>
+    </ng-container>
+  </ng-container>
+</div>

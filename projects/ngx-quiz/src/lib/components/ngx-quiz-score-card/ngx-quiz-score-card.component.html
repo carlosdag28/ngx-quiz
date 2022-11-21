@@ -1,0 +1,15 @@
+<div class="score-card">
+  <div class="points">
+    <div class="points__number">{{ score }}</div>
+    <div class="points__text">Score</div>
+  </div>
+  <div class="info">
+    <div class="info__title">{{ name }}</div>
+    <div class="info__stars">
+      <ng-container *ngFor="let s of [].constructor(totalStars); let i = index">
+        <app-svg-star [filled]="i < achievedStars" [index]="i"></app-svg-star>
+      </ng-container>
+    </div>
+    <div class="info__level">{{ level }} · {{ duration | time }}</div>
+  </div>
+</div>

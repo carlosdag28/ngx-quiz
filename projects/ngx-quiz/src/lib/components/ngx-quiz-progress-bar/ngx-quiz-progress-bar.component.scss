@@ -1,0 +1,46 @@
+@import '../../../theme/variables';
+@import '../../../theme/breakpoints';
+
+.progress-container {
+  background: white;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border-radius: rem-calc(8);
+  margin-bottom: rem-calc(32);
+  padding: rem-calc(16);
+  display: flex;
+  align-items: center;
+  user-select: none;
+
+  progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    flex: 1;
+
+    &::-webkit-progress-bar {
+      background-color: $progress-bar-bg;
+      border-radius: rem-calc(4);
+      height: rem-calc(16);
+    }
+
+    &::-webkit-progress-value {
+      border-radius: rem-calc(4);
+      background: linear-gradient(90deg, $progress-value-left-bg 0%, $progress-value-right-bg 100%);
+      transition: width 500ms;
+    }
+  }
+
+  &__crown {
+    margin: rem-calc(0 8);
+
+    app-svg-crown {
+      height: rem-calc(24);
+      width: rem-calc(24);
+    }
+  }
+
+  &__current,
+  &__total {
+    font-size: rem-calc(14);
+    font-weight: 900;
+  }
+}

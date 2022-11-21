@@ -1,0 +1,32 @@
+@import '../../../theme/variables';
+@import '../../../theme/breakpoints';
+
+:host {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.on-going-screen {
+  height: 100%;
+
+  &__inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .quiz__answers {
+    display: grid;
+    gap: rem-calc(8);
+    margin-bottom: rem-calc(32);
+    grid-template-columns: 1fr;
+
+    &.partial-width {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

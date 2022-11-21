@@ -1,0 +1,72 @@
+@import '../../../theme/variables';
+@import '../../../theme/unit';
+
+* {
+  box-sizing: border-box;
+}
+
+.answer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100%;
+
+  color: $answer-card-text-default;
+  font-weight: 400;
+  font-size: rem-calc(20);
+
+  padding: 1rem;
+  background: $answer-card-bg-default;
+  border: 1px solid $answer-card-border;
+  border-radius: rem-calc(8);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    color: $answer-card-text-hover;
+    background-color: white;
+  }
+
+  &:active {
+    color: $answer-card-text-active;
+    background-color: #d1efeb;
+  }
+
+  &--selected {
+    color: $answer-card-text-selected;
+    background: white;
+
+    &:hover {
+      color: $answer-card-text-hover;
+      background-color: white;
+    }
+
+    .answer-circle {
+      background: linear-gradient(90deg, $answer-checkmark-bg-left 0%, $answer-checkmark-bg-right 100%);
+    }
+  }
+
+  &__image {
+    display: flex;
+    margin-right: rem-calc(16);
+
+    img {
+      max-width: rem-calc(80);
+    }
+  }
+
+  .answer-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $answer-card-border;
+    width: rem-calc(16);
+    height: rem-calc(16);
+    min-width: rem-calc(16);
+    min-height: rem-calc(16);
+    border-radius: 50%;
+  }
+}

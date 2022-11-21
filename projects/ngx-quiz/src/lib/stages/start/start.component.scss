@@ -1,0 +1,81 @@
+@import '../../../theme/variables';
+@import '../../../theme/buttons';
+@import '../../../theme/unit';
+
+$start-screen-max-width: rem-calc(500);
+
+:host {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.start-screen {
+  display: grid;
+  place-items: center;
+  height: 100%;
+
+  max-width: $start-screen-max-width;
+  margin: auto;
+
+  &__title {
+    font-size: rem-calc(32);
+    font-weight: bold;
+    color: $main-title;
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-size: rem-calc(24);
+    color: $main-title;
+    margin-top: rem-calc(8);
+    margin-bottom: rem-calc(48);
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: rem-calc(16);
+    padding: rem-calc(32);
+
+    background-color: $card-bg;
+    -webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+
+    .title {
+      font-size: rem-calc(36);
+      font-weight: bold;
+      color: $main-title;
+      margin-bottom: rem-calc(32);
+      text-align: center;
+    }
+
+    .image {
+      width: 100%;
+      margin-bottom: rem-calc(32);
+      border-radius: rem-calc(16);
+      -webkit-box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .button-container {
+      width: 100%;
+    }
+  }
+
+  &__quiz-info {
+    font-weight: 400;
+    font-size: rem-calc(14);
+    margin: rem-calc(16);
+    color: $main-title;
+    text-align: center;
+  }
+}

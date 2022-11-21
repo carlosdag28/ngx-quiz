@@ -1,0 +1,9 @@
+<div class="progress-container">
+  <progress [value]="value | progressIndex" [max]="max"></progress>
+  <span class="progress-container__crown">
+    <app-svg-crown></app-svg-crown>
+  </span>
+  <span class="progress-container__current">{{ value | progressIndex }}</span>
+  <span>/</span>
+  <span class="progress-container__total">{{ max }}</span>
+</div>

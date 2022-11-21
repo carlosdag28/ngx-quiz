@@ -1,0 +1,30 @@
+<div class="on-going-screen">
+  <div class="on-going-screen__inner-container">
+    <ngx-quiz-progress-bar [value]="index" [max]="quiz.questions.length"> </ngx-quiz-progress-bar>
+
+    <div class="quiz__container">
+      <ngx-quiz-header [title]="question.title" [description]="question.description" [displayImage]="question.displayImage">
+      </ngx-quiz-header>
+      <div class="quiz__answers" containerWidth>
+        <ng-container *ngFor="let answer of question.answers; let i = index">
+          <ngx-quiz-answer-card
+            [displayImage]="answer.displayImage"
+            [displayText]="answer.displayText"
+            [selected]="answerClickedIndex === i"
+            (ev_click)="answerClicked(question, i)"
+          ></ngx-quiz-answer-card>
+        </ng-container>
+      </div>
+    </div>
+
+    <ng-container *ngIf="!quiz.automaticAdvance">
+      <ngx-quiz-actions
+        [prevVisible]="index !== 0 && quiz.returnAllowed"
+        [nextVisible]="index <= quiz.questions.length - 1 && questionHasBeenAnswered"
+        (ev_prev)="previousQuestion()"
+        (ev_next)="nextQuestion()"
+      >
+      </ngx-quiz-actions>
+    </ng-container>
+  </div>
+</div>
