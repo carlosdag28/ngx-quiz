@@ -1,0 +1,9 @@
+@import "unit";
+
+@mixin stage-container {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 100%;
+  padding: rem-calc(16);
+}

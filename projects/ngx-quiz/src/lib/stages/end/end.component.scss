@@ -1,19 +1,13 @@
 @import '../../../theme/variables';
-@import '../../../theme/buttons';
 @import '../../../theme/unit';
-
-:host {
-  height: 100%;
-}
+@import '../../../theme/mixins';
 
 * {
   box-sizing: border-box;
 }
 
 .end-screen {
-  display: grid;
-  place-items: center;
-  height: 100%;
+  @include stage-container;
 
   &__title,
   &__subtitle {

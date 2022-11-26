@@ -1,24 +1,17 @@
 @import '../../../theme/variables';
-@import '../../../theme/buttons';
 @import '../../../theme/unit';
-
-$start-screen-max-width: rem-calc(500);
-
-:host {
-  height: 100%;
-}
+@import '../../../theme/mixins';
 
 * {
   box-sizing: border-box;
 }
 
 .start-screen {
-  display: grid;
-  place-items: center;
-  height: 100%;
+  @include stage-container;
 
-  max-width: $start-screen-max-width;
-  margin: auto;
+  &__inner-container {
+    max-width: rem-calc(500);
+  }
 
   &__title {
     font-size: rem-calc(32);
