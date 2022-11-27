@@ -1,0 +1,16 @@
+<button class="button" [class.button--primary]="primary" [disabled]="disabled" (click)="click()">
+
+  <ng-container *ngIf="buttonStyleConfig.displayType !== 'text'">
+    <ng-container [ngSwitch]="buttonType">
+    <span class="button__icon-wrapper" [class.has-margin]="buttonStyleConfig.displayType !== 'icon'">
+      <app-svg-play *ngSwitchCase="'start'"></app-svg-play>
+      <app-svg-arrow *ngSwitchCase="'prev'" [invert]="true"></app-svg-arrow>
+      <app-svg-arrow *ngSwitchCase="'next'"></app-svg-arrow>
+      <app-svg-restart *ngSwitchCase="'restart'"></app-svg-restart>
+    </span>
+    </ng-container>
+  </ng-container>
+  <ng-container *ngIf="buttonStyleConfig.displayType !== 'icon'">
+    <span>{{ buttonStyleConfig.displayText }}</span>
+  </ng-container>
+</button>

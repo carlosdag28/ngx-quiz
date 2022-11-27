@@ -1,9 +1,10 @@
 <div class="on-going-screen">
   <div class="on-going-screen__inner-container">
-    <ngx-quiz-progress-bar [value]="index" [max]="quiz.questions.length"> </ngx-quiz-progress-bar>
+    <ngx-quiz-progress-bar [value]="index" [max]="quiz.questions.length"></ngx-quiz-progress-bar>
 
     <div class="quiz__container">
-      <ngx-quiz-header [title]="question.title" [description]="question.description" [displayImage]="question.displayImage">
+      <ngx-quiz-header [title]="question.title" [description]="question.description"
+                       [displayImage]="question.displayImage">
       </ngx-quiz-header>
       <div class="quiz__answers" containerWidth>
         <ng-container *ngFor="let answer of question.answers; let i = index">
@@ -18,13 +19,21 @@
     </div>
 
     <ng-container *ngIf="!quiz.automaticAdvance">
-      <ngx-quiz-actions
-        [prevVisible]="index !== 0 && quiz.returnAllowed"
-        [nextVisible]="index <= quiz.questions.length - 1 && questionHasBeenAnswered"
-        (ev_prev)="previousQuestion()"
-        (ev_next)="nextQuestion()"
-      >
-      </ngx-quiz-actions>
+      <div class="quiz__actions">
+        <ngx-quiz-action-button
+          [buttonType]="'prev'"
+          [buttonStyleConfig]="quiz.style.buttons.prev"
+          [disabled]="!(index !== 0 && quiz.returnAllowed)"
+          (ev_click)="previousQuestion()"
+        ></ngx-quiz-action-button>
+
+        <ngx-quiz-action-button
+          [buttonType]="'next'"
+          [buttonStyleConfig]="quiz.style.buttons.next"
+          [disabled]="!(index <= quiz.questions.length - 1 && questionHasBeenAnswered)"
+          (ev_click)="nextQuestion()"
+        ></ngx-quiz-action-button>
+      </div>
     </ng-container>
   </div>
 </div>

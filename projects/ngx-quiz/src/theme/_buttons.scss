@@ -2,6 +2,10 @@
 @import 'unit';
 
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   padding: rem-calc(16 32);
   border-style: none;
   border-radius: rem-calc(4);
@@ -14,6 +18,7 @@
     font-size: rem-calc(20);
     font-weight: 500;
     color: $btn-primary-text-color;
+    stroke: $btn-primary-text-color;
     background: linear-gradient(90deg, $btn-primary-left-default 0%, $btn-primary-right-default 100%);
     border-radius: rem-calc(16);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -35,4 +40,16 @@
       cursor: default;
     }
   }
+
+  &__icon-wrapper {
+    &.has-margin {
+      margin-right: rem-calc(8);
+    }
+  }
+
+  app-svg-play, app-svg-arrow, app-svg-restart {
+    width: rem-calc(24);
+    height: rem-calc(24);
+  }
+
 }

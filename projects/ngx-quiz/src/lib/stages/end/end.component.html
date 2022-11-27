@@ -1,7 +1,12 @@
 <div class="end-screen">
   <div class="end-screen__inner-container">
-    <h1 class="end-screen__title">{{ quiz.endScreen?.title || 'Congrats!' }}</h1>
-    <h2 class="end-screen__subtitle">{{ quiz.endScreen?.description || 'You just completed' }}</h2>
+
+    <ng-container *ngIf="quiz.endScreen.title">
+      <h1 class="end-screen__title">{{ quiz.endScreen?.title }}</h1>
+    </ng-container>
+    <ng-container *ngIf="quiz.endScreen.description">
+      <h2 class="end-screen__subtitle">{{ quiz.endScreen?.description }}</h2>
+    </ng-container>
 
     <div class="result-container">
       <div class="result-container__medal-container">
@@ -21,7 +26,8 @@
         <ng-container *ngIf="quiz.repeatAllowed">
           <div class="result-container__button-container">
             <ngx-quiz-action-button
-              [displayText]="quiz.endScreen?.buttonText || 'Restart'"
+              [buttonType]="'restart'"
+              [buttonStyleConfig]="quiz.style.buttons.restart"
               (ev_click)="restartQuiz()"
             ></ngx-quiz-action-button>
           </div>

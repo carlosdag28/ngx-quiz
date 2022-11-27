@@ -6,18 +6,26 @@ export enum QuizStatus {
   Finished = 'finished'
 }
 
-export interface StartScreen {
-  title: string;
-  description: string;
-  displayImage: string;
-  buttonText: string;
+export interface Screen {
+  title?: string;
+  description?: string;
+  displayImage?: string;
 }
 
-export interface EndScreen {
-  title: string;
-  description: string;
-  displayImage?: string;
-  buttonText: string;
+export interface StartScreen extends Screen {}
+
+export interface EndScreen extends Screen {}
+
+export type ButtonType = 'start' | 'prev' | 'next' | 'restart';
+export type DisplayType = 'icon' | 'text' | 'both';
+
+export interface ButtonStyleConfig {
+  displayType: DisplayType;
+  displayText: string;
+}
+
+export interface StyleConfig {
+  buttons: Record<ButtonType, ButtonStyleConfig>;
 }
 
 export interface Quiz {
@@ -28,6 +36,7 @@ export interface Quiz {
   returnAllowed: boolean;
   repeatAllowed: boolean;
   emitReport: boolean;
+  style: StyleConfig;
   startScreen?: StartScreen;
   endScreen?: EndScreen;
   questions: Question[];

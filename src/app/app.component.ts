@@ -8,7 +8,7 @@ import { Quiz } from '../../projects/ngx-quiz/src/lib/shared/models/quiz';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  quiz: Quiz | any = {
+  quiz: Quiz = {
     name: 'Angular',
     level: 'Beginner',
     duration: 480,
@@ -20,15 +20,21 @@ export class AppComponent {
       title: '',
       description: '',
       displayImage:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png',
-      buttonText: 'Start'
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png'
     },
     endScreen: {
       title: '¡Congratulations!',
       description: 'You complete the quiz!',
       displayImage:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png',
-      buttonText: 'Restart'
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png'
+    },
+    style: {
+      buttons: {
+        start: { displayType: 'both', displayText: 'Start' },
+        prev: { displayType: 'icon', displayText: 'Back' },
+        next: { displayType: 'icon', displayText: 'Next' },
+        restart: { displayType: 'both', displayText: 'Restart' }
+      }
     },
     questions: [
       {
@@ -37,8 +43,8 @@ export class AppComponent {
         description: 'Choose the correct answer',
         displayImage: 'https://cdn.searchenginejournal.com/wp-content/uploads/2019/04/the-seo-guide-to-angular-1520x800.png',
         answers: [
-          { displayText: '@Output()', value: 100 },
-          { displayText: '@Input()', value: 0 },
+          { displayText: '@Output()', value: 0 },
+          { displayText: '@Input()', value: 100 },
           { displayText: 'Output', value: 0 },
           { displayText: 'Input', value: 0 }
         ]

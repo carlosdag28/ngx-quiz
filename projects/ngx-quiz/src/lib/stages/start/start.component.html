@@ -14,11 +14,15 @@
       </ng-container>
 
       <ng-container *ngIf="quiz.startScreen.displayImage">
-        <img class="image" [src]="quiz.startScreen.displayImage" alt="start" />
+        <img class="image" [src]="quiz.startScreen.displayImage" alt="start"/>
       </ng-container>
 
       <div class="button-container">
-        <ngx-quiz-action-button [displayText]="quiz.startScreen.buttonText" (ev_click)="startQuiz()"></ngx-quiz-action-button>
+        <ngx-quiz-action-button
+          [buttonType]="'start'"
+          [buttonStyleConfig]="quiz.style.buttons.start"
+          (ev_click)="startQuiz()"
+        ></ngx-quiz-action-button>
       </div>
     </div>
 

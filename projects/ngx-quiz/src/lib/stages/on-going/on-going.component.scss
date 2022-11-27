@@ -27,4 +27,15 @@
       grid-template-columns: 1fr 1fr;
     }
   }
+
+  .quiz__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem-calc(16);
+    margin-bottom: rem-calc(16);
+
+    & > * {
+      flex-grow: 1;
+    }
+  }
 }
