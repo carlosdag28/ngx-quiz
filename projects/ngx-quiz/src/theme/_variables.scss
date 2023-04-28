@@ -1,34 +1,84 @@
-/* === Default theme === */
+/*
+----------------------------------------
+1. General
+2. Start Screen Card
+3. Questions & Answers
+4. Buttons
+5. Score Card
+6. Progress Bar
+----------------------------------------
+*/
 
-/* - General - */
-$main-bg: var(--ngx-quiz-main-bg, #f0f4f7);
-$main-title: var(--ngx-quiz-main-title, #064c64);
+/* - 1. General - */
+////////////////////////////////////////////////////////////////////////////////////////////////////
+$main-bg: var(--ngx-quiz-main-bg, #efeeee);
+$main-title-text: var(--ngx-quiz-main-title-text, #064c64);
+
+/* - 2. Start Screen Card - */
+////////////////////////////////////////////////////////////////////////////////////////////////////
 $card-bg: var(--ngx-quiz-card-bg, #ffffff);
+$card-box-shadow: var(--ngx-quiz-card-box-shadow, (0 4px 16px rgba(0, 0, 0, 0.08)));
 
-/* - Buttons - */
-/* - PRIMARY: Default, Hover & Active - */
-$btn-primary-text-color: var(--ngx-quiz-btn-primary-text-color, #ffffff);
-$btn-primary-left-default: var(--ngx-quiz-btn-primary-left-default, #f6b75f);
-$btn-primary-right-default: var(--ngx-quiz-btn-primary-right-default, #f59060);
-$btn-primary-left-hover: var(--ngx-quiz-btn-primary-left-hover, #f8b637);
-$btn-primary-right-hover: var(--ngx-quiz-btn-primary-right-hover, #f66b28);
-$btn-primary-left-active: var(--ngx-quiz-btn-primary-left-active, #ffffff);
-$btn-primary-right-active: var(--ngx-quiz-btn-primary-right-active, #f6b75f);
-$btn-primary-disabled-bg: var(--ngx-quiz-btn-primary-disabled-bg, #d1efeb);
+/* - 3. Questions & Answers - */
+////////////////////////////////////////////////////////////////////////////////////////////////////
+$question-title: var(--ngx-quiz-question-title, #2f4745);
+$question-description: var(--ngx-quiz-question-description, #2f4745);
 
-/* - SECONDARY: Default, Hover & Active - */
-$btn-secondary-text-color: var(--ngx-quiz-btn-secondary-text-color, #ffffff);
-$btn-secondary-text-color-hover: var(--ngx-quiz-btn-secondary-text-color-hover, #487672);
-$btn-secondary-text-color-active: var(--ngx-quiz-btn-secondary-text-color-active, #0ab5a4);
+$answer-card-text: var(--ngx-quiz-answer-card-text, #2f4745);
+$answer-card-text-hover: var(--ngx-quiz-answer-card-text-hover, #0ab5a4);
+$answer-card-text-active: var(--ngx-quiz-answer-card-text-active, #487672);
+$answer-card-text-selected: var(--ngx-quiz-answer-card-text-selected, #2f4745);
+$answer-card-text-disabled: var(--ngx-quiz-answer-card-text-disabled, #2f4745);
 
-$btn-secondary-bg: var(--ngx-quiz-btn-secondary-bg, #e2e3e4);
-$btn-secondary-bg-hover: var(--ngx-quiz-btn-secondary-bg-hover, #e7e9ea);
-$btn-secondary-bg-active: var(--ngx-quiz-btn-secondary-bg-active, #f0f4f7);
+$answer-card-bg: var(--ngx-quiz-answer-card-bg, #ffffff);
+$answer-card-bg-hover: var(--ngx-quiz-answer-card-bg-hover, #ffffff);
+$answer-card-bg-active: var(--ngx-quiz-answer-card-bg-active, #ffffff);
+$answer-card-bg-selected: var(--ngx-quiz-answer-card-bg-selected, #ffffff);
+$answer-card-bg-selected-hover: var(--ngx-quiz-answer-card-bg-selected-hover, #ffffff);
 
-/* - Progress Bar & Crown - */
+$answer-card-border-color: var(--ngx-quiz-answer-card-border-color, #d1efeb);
+$answer-card-box-shadow: var(--ngx-quiz-answer-card-box-shadow, (0 8px 32px rgba(0, 0, 0, 0.1)));
+$answer-card-box-shadow-selected: var(--ngx-quiz-answer-card-box-shadow-selected, (0 8px 32px rgba(0, 0, 0, 0.1)));
+
+// TODO Removal pending
+$answer-checkmark-bg: var(--ngx-quiz-answer-checkmark-bg, linear-gradient(90deg, #f6b75f 0%, #f59060 100%));
+
+/* - 4. Buttons - */
+////////////////////////////////////////////////////////////////////////////////////////////////////
+/* --- Primary --- */
+$btn-primary-text: var(--ngx-quiz-btn-primary-text, #ffffff);
+$btn-primary-bg: var(--ngx-quiz-btn-primary-bg, linear-gradient(90deg, #f6b75f 0%, #f59060 100%));
+$btn-primary-bg-hover: var(--ngx-quiz-btn-primary-bg-hover, linear-gradient(90deg, #f8b637 0%, #f66b28 100%));
+$btn-primary-bg-active: var(--ngx-quiz-btn-primary-bg-active, linear-gradient(90deg, #f6b75f 0%, #f6b75f 100%));
+$btn-primary-bg-disabled: var(--ngx-quiz-btn-primary-bg-disabled, #d1efeb);
+$btn-primary-box-shadow: var(--ngx-quiz-btn-primary-box-shadow, (0 8px 32px rgba(0, 0, 0, 0.1)));
+$btn-primary-box-shadow-active: var(--ngx-quiz-btn-primary-box-shadow-active, unset);
+$btn-primary-box-shadow-disabled: var(--ngx-quiz-btn-primary-box-shadow-disabled, unset);
+
+
+/* - 5. Score card - */
+////////////////////////////////////////////////////////////////////////////////////////////////////
+$score-card-bg: var(--ngx-quiz-score-card-bg, #ffffff);
+$score-card-box-shadow: var(--ngx-quiz-score-card-box-shadow, none);
+
+$score-number-text: var(--ngx-quiz-score-number-text, #659590);
+$score-number-bg: var(--ngx-quiz-score-number-bg, #d1efeb);
+$score-number-box-shadow: var(--ngx-quiz-score-number-box-shadow, none);
+
+$score-info-title-text: var(--ngx-quiz-score-info-title-text, #659590);
+$score-info-level-text: var(--ngx-quiz-score-info-level-text, #487672);
+
+$score-star-top: var(--ngx-quiz-score-star-top, #ec986e);
+$score-star-bottom: var(--ngx-quiz-score-star-bottom, #ecb772);
+$score-star-empty: var(--ngx-quiz-score-star-empty, #d6d6d6);
+
+/* - 6. Progress Bar & Crown - */
+////////////////////////////////////////////////////////////////////////////////////////////////////
+$progress-container-bg: var(--ngx-quiz-progress-container-bg, #ffffff);
+$progress-container-box-shadow: var(--ngx-quiz-progress-container-box-shadow, (0 8px 32px rgba(0, 0, 0, 0.08)));
 $progress-bar-bg: var(--ngx-quiz-progress-bar-bg, #d1efeb);
-$progress-value-left-bg: var(--ngx-quiz-progress-value-left-bg, #f6b75f);
-$progress-value-right-bg: var(--ngx-quiz-progress-value-right-bg, #f59060);
+$progress-value-bg: var(--ngx-quiz-progress-value-bg, linear-gradient(90deg, #f6b75f 0%, #f59060 100%));
+
 // ----- first linearGradient
 $crown-inner-left: var(--ngx-quiz-crown-inner-left, #f6b75f);
 $crown-inner-right: var(--ngx-quiz-crown-inner-right, #f59060);
@@ -38,34 +88,3 @@ $crown-silhouette-bottom: var(--ngx-quiz-crown-silhouette-bottom, #f59060);
 // ----- third linearGradient
 $crown-base-top: var(--ngx-quiz-crown-base-top, #f6b75f);
 $crown-base-bottom: var(--ngx-quiz-crown-base-bottom, #f59060);
-
-/* - Questions - */
-$question-title: var(--ngx-quiz-question-title, #2f4745);
-
-/* - Answer Cards - */
-$answer-card-bg-default: var(--ngx-quiz-answer-card-bg-default, #ffffff);
-$answer-card-bg-active: var(--ngx-quiz-answer-card-bg-active, #ffffff);
-$answer-card-bg-disabled: var(--ngx-quiz-answer-card-bg-disabled, #eeeeee);
-
-$answer-card-text-default: var(--ngx-quiz-answer-card-text-default, #2f4745);
-$answer-card-text-hover: var(--ngx-quiz-answer-card-text-hover, #0ab5a4);
-$answer-card-text-active: var(--ngx-quiz-answer-card-active, #487672);
-$answer-card-text-selected: var(--ngx-quiz-answer-card-selected, #2f4745);
-$answer-card-text-disabled: var(--ngx-quiz-answer-card-disabled, #2f4745);
-
-$answer-card-border: var(--ngx-quiz-answer-card-border, #d1efeb);
-$answer-checkmark: var(--ngx-quiz-answer-checkmark, #ffffff);
-$answer-checkmark-bg-left: var(--ngx-quiz-answer-checkmark-bg-left, #f6b75f);
-$answer-checkmark-bg-right: var(--ngx-quiz-answer-checkmark-bg-right, #f59060);
-
-/* - Score card - */
-$score-card-bg: var(--ngx-quiz-score-card-bg, #ffffff);
-$score-number-bg: var(--ngx-quiz-score-number-bg, #d1efeb);
-$score-number: var(--ngx-quiz-score-number-color, #659590);
-
-$score-title: var(--ngx-quiz-score-title, #659590);
-$score-level: var(--ngx-quiz-score-level, #487672);
-
-$score-star-top: var(--ngx-quiz-score-star-top, #ec986e);
-$score-star-bottom: var(--ngx-quiz-score-star-bottom, #ecb772);
-$score-star-empty: var(--ngx-quiz-score-star-empty, #d6d6d6);

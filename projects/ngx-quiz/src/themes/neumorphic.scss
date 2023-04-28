@@ -1,0 +1,61 @@
+:root {
+  /* - 1. General - */
+  --ngx-quiz-main-bg: #efeeee;
+  --ngx-quiz-main-title-text: #898989;
+
+  /* - 2. Start Screen Card - */
+  --ngx-quiz-card-bg: #efeeee;
+  --ngx-quiz-card-box-shadow: 7px 7px 10px #a1a1a1, -7px -7px 10px #ffffff;
+
+  /* - 3. Questions & Answers - */
+  --ngx-quiz-question-title: #898989;
+  --ngx-quiz-question-description: #898989;
+  --ngx-quiz-answer-card-text: #898989;
+  --ngx-quiz-answer-card-text-hover: #898989;
+  --ngx-quiz-answer-card-text-active: #898989;
+  --ngx-quiz-answer-card-text-selected: #898989;
+  --ngx-quiz-answer-card-text-disabled: #898989;
+  --ngx-quiz-answer-card-border-color: #efeeee;
+  --ngx-quiz-answer-card-bg: #efeeee;
+  --ngx-quiz-answer-card-bg-hover: #ffffff;
+  --ngx-quiz-answer-card-bg-active: #efeeee;
+  --ngx-quiz-answer-card-bg-selected: #efeeee;
+  --ngx-quiz-answer-card-bg-selected-hover: #ffffff;
+  --ngx-quiz-answer-card-box-shadow: 7px 7px 10px #a1a1a1, -7px -7px 10px #ffffff;
+  --ngx-quiz-answer-card-box-shadow-selected: 0px 1px 1px #a1a1a1, 0px -1px 1px #ffffff;
+
+  /* - 4. Buttons - */
+  /* --- Primary --- */
+  --ngx-quiz-btn-primary-text: #898989;
+  --ngx-quiz-btn-primary-bg: #efeeee;
+  --ngx-quiz-btn-primary-bg-hover: #efeeee;
+  --ngx-quiz-btn-primary-bg-active: #efeeee;
+  --ngx-quiz-btn-primary-bg-disabled: #efeeee;
+  --ngx-quiz-btn-primary-box-shadow: 7px 7px 10px #a1a1a1, -7px -7px 10px #ffffff;
+  --ngx-quiz-btn-primary-box-shadow-active: 0px 1px 1px #a1a1a1, 0px -1px 1px #ffffff;
+  --ngx-quiz-btn-primary-box-shadow-disabled: 0px 1px 1px #a1a1a1, 0px -1px 1px #ffffff;
+
+  /* - 5. Score card - */
+  --ngx-quiz-score-card-bg: #efeeee;
+  --ngx-quiz-score-card-box-shadow: 0px 1px 1px #a1a1a1, 0px -1px 1px #ffffff;
+  --ngx-quiz-score-number-text: #898989;
+  --ngx-quiz-score-number-bg: #efeeee;
+  --ngx-quiz-score-number-box-shadow: 0px 1px 1px #a1a1a1, 0px -1px 1px #ffffff;
+  --ngx-quiz-score-info-title-text: #898989;
+  --ngx-quiz-score-info-level-text: #898989;
+  --ngx-quiz-score-star-top: #a1a1a1;
+  --ngx-quiz-score-star-bottom: #a1a1a1;
+  --ngx-quiz-score-star-empty: #d3d3d3;
+
+  /* - 6. Progress Bar & Crown - */
+  --ngx-quiz-progress-container-bg: #efeeee;
+  --ngx-quiz-progress-container-box-shadow: 0px 1px 1px #a1a1a1, 0px -1px 1px #ffffff;
+  --ngx-quiz-progress-bar-bg: #dedede;
+  --ngx-quiz-progress-value-bg: #a1a1a1;
+  --ngx-quiz-crown-inner-left: #a1a1a1;
+  --ngx-quiz-crown-inner-right: #a1a1a1;
+  --ngx-quiz-crown-silhouette-top: #a1a1a1;
+  --ngx-quiz-crown-silhouette-bottom: #a1a1a1;
+  --ngx-quiz-crown-base-top: #a1a1a1;
+  --ngx-quiz-crown-base-bottom: #a1a1a1;
+}

@@ -1,5 +1,6 @@
 /* You can add global assets to this file, and also import other style files */
 
+
 html,
 body {
   font-family: 'Roboto', sans-serif;
@@ -8,10 +9,4 @@ body {
 }
 
 /* You can import predefined themes on angular.json file or override here */
-//:root {
-//  --primaryColor: hsl(357, 92%, 47%);
-//  --secondaryColor: hsl(0, 0%, 8%);
-//  --textOnPrimary: hsl(0, 0%, 100%);
-//  --textOnSecondary: hsl(0, 0%, 100%);
-//  --background: hsl(0deg 0% 33%);
-//}
+//@import "projects/ngx-quiz/src/themes/neumorphic";

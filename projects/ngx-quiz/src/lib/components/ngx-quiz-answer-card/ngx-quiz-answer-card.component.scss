@@ -5,6 +5,32 @@
   box-sizing: border-box;
 }
 
+@mixin answer-states() {
+  &:hover {
+    color: $answer-card-text-hover;
+    background: $answer-card-bg-hover;
+  }
+  &:active {
+    color: $answer-card-text-active;
+    background: $answer-card-bg-active;
+    box-shadow: $answer-card-box-shadow-selected;
+  }
+  &--selected {
+    color: $answer-card-text-selected;
+    background: $answer-card-bg-selected;
+    box-shadow: $answer-card-box-shadow-selected;
+
+    &:hover {
+      color: $answer-card-text-hover;
+      background: $answer-card-bg-selected-hover;
+    }
+
+    .answer-circle {
+      background: $answer-checkmark-bg; // TODO Delete pending
+    }
+  }
+}
+
 .answer {
   display: flex;
   justify-content: space-between;
@@ -12,42 +38,21 @@
 
   height: 100%;
 
-  color: $answer-card-text-default;
+  color: $answer-card-text;
   font-weight: 400;
   font-size: rem-calc(20);
 
-  padding: 1rem;
-  background: $answer-card-bg-default;
-  border: 1px solid $answer-card-border;
+  padding: rem-calc(16);
+  background: $answer-card-bg;
+  border: 1px solid $answer-card-border-color;
   border-radius: rem-calc(8);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: $answer-card-box-shadow;
   -webkit-tap-highlight-color: transparent;
   cursor: pointer;
   user-select: none;
+  transition: all 100ms ease-in-out;
 
-  &:hover {
-    color: $answer-card-text-hover;
-    background-color: white;
-  }
-
-  &:active {
-    color: $answer-card-text-active;
-    background-color: #d1efeb;
-  }
-
-  &--selected {
-    color: $answer-card-text-selected;
-    background: white;
-
-    &:hover {
-      color: $answer-card-text-hover;
-      background-color: white;
-    }
-
-    .answer-circle {
-      background: linear-gradient(90deg, $answer-checkmark-bg-left 0%, $answer-checkmark-bg-right 100%);
-    }
-  }
+  @include answer-states();
 
   &__image {
     display: flex;
@@ -62,11 +67,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid $answer-card-border;
+    border: 1px solid $answer-card-border-color;
     width: rem-calc(16);
     height: rem-calc(16);
     min-width: rem-calc(16);
     min-height: rem-calc(16);
     border-radius: 50%;
   }
+
+  // TODO Delete pending
 }

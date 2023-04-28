@@ -1,43 +1,65 @@
 @import 'variables';
 @import 'unit';
 
+$button-sentiments: (
+  primary: (
+    color: $btn-primary-text,
+    background: $btn-primary-bg,
+    background-hover: $btn-primary-bg-hover,
+    background-active: $btn-primary-bg-active,
+    background-disabled: $btn-primary-bg-disabled,
+    box-shadow: $btn-primary-box-shadow,
+    box-shadow-active: $btn-primary-box-shadow-active,
+    box-shadow-disabled: $btn-primary-box-shadow-disabled
+  )
+);
+
+@mixin button-states($sentiment-styles) {
+
+  &:hover {
+    background: map-get($sentiment-styles, background-hover);
+  }
+  &:active:not([disabled]) {
+    background: map-get($sentiment-styles, background-active);
+    box-shadow: map-get($sentiment-styles, box-shadow-active);
+    transition: all 100ms ease-in-out;
+  }
+
+}
+
+//////////////////////////////////////////////////
+
 .button {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  width: 100%;
+  font-weight: 500;
   padding: rem-calc(16 32);
-  border-style: none;
-  border-radius: rem-calc(4);
-  font-size: rem-calc(16);
+  border-radius: rem-calc(16);
   cursor: pointer;
   user-select: none;
-  width: 100%;
+  border-style: none;
+  -webkit-tap-highlight-color: transparent;
 
-  &--primary {
-    font-size: rem-calc(20);
-    font-weight: 500;
-    color: $btn-primary-text-color;
-    stroke: $btn-primary-text-color;
-    background: linear-gradient(90deg, $btn-primary-left-default 0%, $btn-primary-right-default 100%);
-    border-radius: rem-calc(16);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    -webkit-tap-highlight-color: transparent;
+  @each $sentiment, $sentiment-styles in $button-sentiments {
 
-    &:hover {
-      background: linear-gradient(90deg, $btn-primary-left-hover 0%, $btn-primary-right-hover 100%);
-    }
+    &--#{$sentiment} {
+      font-size: rem-calc(20);
 
-    &:not([disabled]):active {
-      background: -webkit-linear-gradient($btn-primary-left-active, $btn-primary-right-active);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+      color: map-get($sentiment-styles, color);
+      stroke: map-get($sentiment-styles, color);
 
-    &:disabled {
-      background: $btn-primary-disabled-bg;
-      box-shadow: none;
-      cursor: default;
+      box-shadow: map-get($sentiment-styles, box-shadow);
+      background: map-get($sentiment-styles, background);
+      @include button-states($sentiment-styles);
+
+      &:disabled {
+        background: map-get($sentiment-styles, background-disabled);;
+        box-shadow: map-get($sentiment-styles, box-shadow-disabled);;
+        cursor: default;
+      }
+
     }
   }
 

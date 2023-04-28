@@ -2,30 +2,30 @@
 @import '../../../theme/unit';
 
 .progress-container {
-  background: white;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-  border-radius: rem-calc(8);
-  margin-bottom: rem-calc(32);
-  padding: rem-calc(16);
   display: flex;
   align-items: center;
   user-select: none;
+  padding: rem-calc(16);
+  border-radius: rem-calc(8);
+  margin-bottom: rem-calc(32);
+  background: $progress-container-bg;
+  box-shadow: $progress-container-box-shadow;
 
   progress[value] {
-    -webkit-appearance: none;
-    appearance: none;
     flex: 1;
+    appearance: none;
+    -webkit-appearance: none;
 
     &::-webkit-progress-bar {
-      background-color: $progress-bar-bg;
-      border-radius: rem-calc(4);
       height: rem-calc(16);
+      border-radius: rem-calc(4);
+      background: $progress-bar-bg;
     }
 
     &::-webkit-progress-value {
-      border-radius: rem-calc(4);
-      background: linear-gradient(90deg, $progress-value-left-bg 0%, $progress-value-right-bg 100%);
       transition: width 500ms;
+      border-radius: rem-calc(4);
+      background: $progress-value-bg;
     }
   }
 

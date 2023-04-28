@@ -6,13 +6,15 @@
   display: flex;
   padding: rem-calc(24);
   border-radius: rem-calc(16);
-  background-color: $score-card-bg;
+  background: $score-card-bg;
+  box-shadow: $score-card-box-shadow;
 
   .points {
     padding: rem-calc(16) rem-calc(24);
     border-radius: rem-calc(16);
-    color: $score-number;
-    background-color: $score-number-bg;
+    color: $score-number-text;
+    background: $score-number-bg;
+    box-shadow: $score-number-box-shadow;
 
     &__number {
       font-size: rem-calc(36);
@@ -30,7 +32,7 @@
 
     &__title {
       font-size: rem-calc(20);
-      color: $score-title;
+      color: $score-info-title-text;
     }
 
     &__stars {
@@ -49,7 +51,7 @@
 
     &__level {
       font-size: rem-calc(14);
-      color: $score-level;
+      color: $score-info-level-text;
     }
   }
 }
